@@ -1,0 +1,13 @@
+system:
+        jobs: 4
+        template_dir: "Ice/"
+
+jobs:
+        - id: "job1"
+          variables:
+                "DTMAX" : ["1.D-1"]
+                "LAYPOS": ['175', '180']
+        - id: "job2"
+          variables:
+                "DTMAX" : ["1.D-1"]
+                "LAYPOS": ['1755', '1890']
