@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import argparse, os, shutil, sys, yaml
+import argparse, os, shutil, sys, yaml, multiprocessing, time
 
 data_dir = './data'
 
@@ -42,23 +42,26 @@ def create_job(job):
     f.close()
     os.chdir(curdur)
 
-def run_job(job)
+def run_job(job):
     curdur = os.getcwd()
     os.chdir(job['id'])
-    os.system('./iSALE2D')
+    os.system('./iSALE2D > /dev/null')
     os.chdir(curdur)
     os.chdir("ast265-final-data")
-    os.system("./newresult -p ../{} -n {}".format(job['id'], job['id']))
+    os.system("./newresult -p ../{} -n {} > /dev/null".format(job['id'], job['id']))
     os.chdir(curdur)
 
 def cleanup_job(job):
     shutil.rmtree(job['id'])
 
 def complete_job(job):
+    print("Starting job " + job['id'] + " at " + str(time.time()))
     create_job(job)
     run_job(job)
     cleanup_job(job)
+    print("Completing job " + job['id'] + " at " + str(time.time()))
 
 
-
-
+if __name__ == '__main__':
+    p = multiprocessing.Pool(data['system']['jobs'])
+    p.map(complete_job, data['jobs'])

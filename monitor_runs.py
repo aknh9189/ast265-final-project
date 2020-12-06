@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from glob import glob
 import os 
 import time
