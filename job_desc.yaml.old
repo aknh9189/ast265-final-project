@@ -7,6 +7,21 @@ system:
         template_dir: "Ice/"
 
 jobs:
+        - id: "job-0_4km"
+          variables:
+                "LAYPOS" : ["276", '280'] 
+        - id: "job-0_8km"
+          variables:
+                "LAYPOS" : ["272", '280'] 
+        - id: "job-1_2km"
+          variables:
+                "LAYPOS" : ["268", '280'] 
+        - id: "job-1_6km"
+          variables:
+                "LAYPOS" : ["264", '280'] 
+        - id: "job-2km"
+          variables:
+                "LAYPOS" : ["260", '280'] 
         - id: "job-5i"
           variables:
                 "OBJRESH" : ['5'] 

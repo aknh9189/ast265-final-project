@@ -31,8 +31,10 @@ while True:
                     eta = (100 - perc) / ((perc - last_percent[fi]) / dt) / 60
                 last_percent[fi] = perc
                 output += fi + " " + trimmed +  "\t"
-    sys.stdout.write("\r" + output)
+    #sys.stdout.write("\r" + output)
+    #sys.stdout.flush()
+    print(str(time.time()) + " " + output)
     sys.stdout.flush()
-    time.sleep(1)
+    time.sleep(60)
 
 
