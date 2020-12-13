@@ -19,12 +19,3 @@ jobs:
         - id: "job-11i"
           variables:
                 "OBJRESH" : ['11'] 
-        - id: "job-15kmhr"
-          variables:
-                "OBJVEL" : ['-15.0D3'] 
-        - id: "job-20kmhr"
-          variables:
-                "OBJVEL" : ['-20.0D3'] 
-        - id: "job-25kmhr"
-          variables:
-                "OBJVEL" : ['-25.0D3'] 
