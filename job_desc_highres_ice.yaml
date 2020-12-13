@@ -1,0 +1,27 @@
+
+#OBJRESH               CPPR horizontal               : 7
+#LAYPOS                layer position                : 194          : 215 
+#OBJVEL                object velocity               : -2.0D4
+system:
+        jobs: 7
+        template_dir: "Ice/"
+
+jobs:
+        - id: "job-0_0km"
+          variables:
+                "LAYPOS" : ["1070", '1070'] 
+        - id: "job-0_4km"
+          variables:
+                "LAYPOS" : ["1030", '1070'] 
+        - id: "job-0_8km"
+          variables:
+                "LAYPOS" : ["990", '1070'] 
+        - id: "job-1_2km"
+          variables:
+                "LAYPOS" : ["950", '1070'] 
+        - id: "job-1_6km"
+          variables:
+                "LAYPOS" : ["910", '1070'] 
+        - id: "job-2km"
+          variables:
+                "LAYPOS" : ["870", '1070'] 
